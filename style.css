@@ -210,8 +210,12 @@ span img {
     display: block;
   }
 
-  .link-resp {
+  .link{
     display: none;
+  }
+
+  .link-resp {
+    display: flex;
   }
 
   .navbar-resp {
