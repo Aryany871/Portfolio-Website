@@ -10,6 +10,28 @@ for (var i = 0; i < links.length; i++) {
 
 }
 
+//add active class for current section on scroll
+window.addEventListener("scroll",()=>{
+  var l = window.scrollY;
+
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+
+  if(l<600){
+    document.getElementById("sec1_link").className += " active";
+  }  
+
+  else if( l>=600 && l<1368){
+    document.getElementById("sec2_link").className += " active";
+  }
+
+  else{
+    document.getElementById("sec3_link").className += " active";
+  }
+}
+)
+
+
 //function for buttons when they are clicked
 function click_link(section){
 
@@ -34,3 +56,8 @@ menu.addEventListener("click",function(){
  
 
 });
+
+
+
+
+
